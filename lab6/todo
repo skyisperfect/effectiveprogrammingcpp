@@ -1,0 +1,10 @@
+Добавить методы к классу complex
+complex_t
+operator*
+operator/
+operator+=
+oreator-=
+operator*=
+operator/=
+operator=
+opearator==
