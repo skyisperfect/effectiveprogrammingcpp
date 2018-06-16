@@ -1,0 +1,50 @@
+/* Написать программу, которая выводит на экран размеры фундаментальных типов. */
+
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+template <typename T>
+
+class sizeOfType{
+
+private: T x;
+public:
+sizeOfType(){x=0;}
+sizeOfType(T X){x=X;}
+	 
+	T size(){
+		cout << "Size of variable  " << typeid(T).name() << " : " << sizeof(x) << endl;
+}
+};
+
+int main(){
+	int x,ix=1;
+	double dx=1.1;
+	float fx=1.111;
+	char cx='8';
+	long lx=44444;
+	short sx=2;
+	bool bx=1;
+
+cout << "Enter int number x = " ;
+cin >> x;
+
+sizeOfType<int> typeint1(x);
+typeint1.size();
+sizeOfType<int> typeint2(ix);
+typeint2.size();
+sizeOfType<double> typedouble(dx);
+typedouble.size();
+sizeOfType<float> typefloat(fx);
+typefloat.size();
+sizeOfType<char> typechar(cx);
+typechar.size();
+sizeOfType<long> typelong(lx);
+typelong.size();
+sizeOfType<short> typeshort(sx);
+typeshort.size();
+sizeOfType<bool> typebool(bx);
+typebool.size();
+
+};
